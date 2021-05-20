@@ -1,0 +1,14 @@
+.container{
+    grid-area: main;
+    display: grid;
+    padding-left: 50px;
+    overflow-x: hidden;
+    grid-template: 137px 148px 32px 242px 32px 242px / 100%;
+    grid-template-areas: 'header'
+                         'cards'
+                         '.'
+                         'reachs'
+                         '.'
+                         'gender-geo';
+    color: #4F4F4F;
+}

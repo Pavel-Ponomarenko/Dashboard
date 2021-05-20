@@ -1,0 +1,25 @@
+.wrap{
+    position: relative;
+    display: grid;
+    max-width: 1280px;
+    min-height: 880px;
+    margin: 5% auto;
+    font-family: 'Poppins', sans-serif;
+    background-color: #EFF3F9;
+    border-radius: 14px;
+    grid-template: 100% /100px 1180px;
+    grid-template-areas: 'nav  main';
+}
+
+.wrap::after{
+    content: '';
+    position: absolute;
+    top: 740px;
+    left: 993px;
+    width: 415px;
+    height: 415px;
+    margin: 50px;
+    background: linear-gradient(#7F7FD5, #E786D7);
+    border-radius: 50%;
+    z-index: 1;
+}

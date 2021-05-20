@@ -1,0 +1,98 @@
+.reachs{
+    grid-area: reachs;
+    display: grid;
+    grid-template: 242px / 768px 32px 288px;
+    grid-template-areas: 'audience . by-device';
+}
+
+.reach__audience{
+    grid-area: audience;
+    display: grid;
+    padding: 27px 28px 22px 24px;
+    background-color: #FDFDFF;
+    border-radius: 13px;
+    overflow-x: auto;
+    grid-template: 20px 1fr / 372px 1fr;
+    grid-template-areas: 'audience__title audience__form'
+                         'audience__graphic audience__graphic';
+
+    .audience__title{
+        @include title;
+        grid-area: audience__title;
+    }
+    
+    .reach__data{
+        cursor: pointer;
+    }
+
+    .audience__form{
+        grid-area: audience__form;
+        display: inline-flex;
+        justify-content: space-between;
+        width: 300px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .audience__graphic {
+        padding-top: 20px;
+        grid-area: audience__graphic;
+
+    }
+}
+
+.reach__by-device{
+    grid-area: by-device;
+    display: grid;
+    padding: 22px 10px 31px 22px;
+    background-color: #FDFDFF;
+    border-radius: 13px;
+    grid-template: 72px 1fr /1fr 108px;
+    grid-template-areas: 'by-device__title by-device__title'
+                         'by-device__image by-device__inform';
+
+    .by-device__title{
+        @include title;
+        grid-area: by-device__title;
+    }
+
+    .by-device__graphic {
+        grid-area: by-device__image;
+    }
+
+    .by-device__inform{
+        grid-area: by-device__inform;
+        font-size: 12px;
+
+        .pink{
+            position: relative;
+            margin-bottom: 11px;
+            margin-left: 20px;
+        }
+
+        .pink::before{
+            content: '';
+            position: absolute;
+            right: 100px;
+            width: 15px;
+            height: 16px;
+            border-radius: 5px;
+            background-color: #E786D7;
+        }
+
+        .violet{
+            position: relative;
+            margin-left: 20px;
+        }
+
+        .violet::before{
+            content: '';
+            position: absolute;
+            right: 100px;
+            width: 15px;
+            height: 16px;
+            border-radius: 5px;
+            background-color: #7F7FD5;
+        }
+    }
+}

@@ -1,0 +1,96 @@
+.gender-geo{
+    grid-area: gender-geo;
+    display: grid;
+    grid-template: 100% / 675px 31px 381px;
+    grid-template-areas: 'gender . geo' ;
+}
+
+.gender{
+    grid-area: gender;
+    display: grid;
+    padding: 23px 35px 1.5px 24px;
+    background: #FDFDFF;
+    border-radius: 13px;
+    overflow-x: auto;
+    grid-template: 40px 1fr / 194px 320px 1fr;
+    grid-template-areas: 'gender__title . gender__inform'
+                         'gender__image gender__image gender__image';
+    
+    .gender__title{
+        @include title;
+        grid-area: gender__title;
+    }
+
+    .gender__inform{
+        grid-area: gender__inform;
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
+        font-size: 12px;
+    }
+
+    .gender__women{
+        position: relative;
+    }
+
+    .gender__women::before{
+        content: '';
+        position: absolute;
+        right: 50px;
+        width: 15px;
+        height: 16px;
+        border-radius: 5px;
+        background-color: #E786D7;
+    }
+
+    .gender__men{
+        position: relative;
+    }
+
+    .gender__men::before{
+        content: '';
+        position: absolute;
+        right: 30px;
+        width: 15px;
+        height: 16px;
+        border-radius: 5px;
+        background-color: #7F7FD5;
+    }
+
+    .gender__graphic {
+        grid-area: gender__image;
+    }
+}
+
+
+.geo{
+    grid-area: geo;
+    display: grid;
+    padding: 23px 24px 30px 25px;
+    background: #FDFDFF;
+    border-radius: 13px;
+    grid-template: 50px 1fr / 45% 10% 45%;
+    grid-template-areas: 'geo__title . geo__subtitle'
+                         'pie-chart pie-chart pie-chart';
+   
+}
+
+.geo__title{
+    @include title;
+    grid-area: geo__title;
+}
+
+.geo__subtitle{
+    grid-area: geo__subtitle;
+    font-size: 12px;
+    color: #4F4F4F;
+    text-align: right;
+
+    .geo__subtitle--light{
+        color: #979797;
+    }
+}
+
+.geo__graphic {
+    grid-area: pie-chart;
+}

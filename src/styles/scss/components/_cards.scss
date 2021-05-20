@@ -1,0 +1,55 @@
+.cards{
+    grid-area: cards;
+    display: inline-flex;
+    justify-content: space-between;
+    max-width: 1088px;
+}
+
+.card{
+    display: grid;
+    width: 341px;
+    height: 148px;
+    padding: 24px;
+    background-color: #FDFDFF;
+    border-radius: 13px;
+    grid-template: repeat(4, 25%) / 60% 40%;
+    grid-template-areas: 'title drops'
+                            '.  .'
+                            '.  .'
+                            'text percent' ;
+}
+
+.card__title{
+    @include title;
+    grid-area: title;
+}
+
+.card__text{
+    grid-area: text;
+    font-size: 20px;
+    font-weight: $font-width-medium;
+}
+
+.card__percent{
+    grid-area: percent;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.drops{
+    text-align: right;
+}
+
+.drops-button{
+    grid-area: drops;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 25px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.drop{
+    color: #979797;
+    list-style-type: disc;
+}
