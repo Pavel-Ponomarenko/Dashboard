@@ -24,6 +24,14 @@
     .reach__data{
         cursor: pointer;
     }
+    
+    .reach__input{
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        color: #7F7FD5;
+        cursor: pointer;
+    }
 
     .audience__form{
         grid-area: audience__form;
